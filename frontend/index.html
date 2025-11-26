@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Smart Task Analyzer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>🧠 Smart Task Analyzer</h1>
+      <p>Score and prioritize your tasks intelligently.</p>
+    </header>
+
+    <main class="main">
+      <!-- LEFT: INPUT -->
+      <section class="panel">
+        <h2>Add Task</h2>
+
+        <form id="task-form" class="task-form">
+          <div class="field">
+            <label>Title<span>*</span></label>
+            <input type="text" name="title" required placeholder="Fix login bug" />
+          </div>
+
+          <div class="field">
+            <label>Due date</label>
+            <input type="date" name="due_date" />
+          </div>
+
+          <div class="field-group">
+            <div class="field">
+              <label>Estimated hours</label>
+              <input type="number" name="estimated_hours" step="0.1" min="0.1" placeholder="3" />
+            </div>
+            <div class="field">
+              <label>Importance (1–10)</label>
+              <input type="number" name="importance" min="1" max="10" placeholder="8" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Dependencies (IDs, comma separated)</label>
+            <input type="text" name="dependencies" placeholder="e.g. T1, T2" />
+          </div>
+
+          <button type="submit" class="btn primary">➕ Add Task</button>
+        </form>
+
+        <h3>Bulk JSON input (optional)</h3>
+        <textarea id="bulk-input" class="textarea"
+          placeholder='[{"id":"1","title":"Fix bug","due_date":"2025-11-30","estimated_hours":3,"importance":8,"dependencies":[]}]'></textarea>
+
+        <div class="strategy-row">
+          <div class="field">
+            <label>Strategy</label>
+            <select id="strategy">
+              <option value="smart">Smart Balance</option>
+              <option value="fast">Fastest Wins (low effort)</option>
+              <option value="impact">High Impact (importance)</option>
+              <option value="deadline">Deadline Driven</option>
+            </select>
+          </div>
+
+          <button id="analyze-btn" class="btn accent">📊 Analyze Tasks</button>
+        </div>
+
+        <button id="suggest-btn" class="btn ghost">
+          💡 Suggest Top 3 for Today
+        </button>
+
+        <p class="hint">
+          Local task IDs are auto-generated (T1, T2, …). Use those IDs in the
+          dependencies field.
+        </p>
+      </section>
+
+      <!-- RIGHT: OUTPUT -->
+      <section class="panel">
+        <h2>Results</h2>
+        <div id="status" class="status"></div>
+
+        <div id="local-tasks" class="local-tasks"></div>
+
+        <div id="results" class="results"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Backend: <code>http://127.0.0.1:8000/api/tasks/</code></span>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
