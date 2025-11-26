@@ -6,8 +6,7 @@
 </p>
 
 <p align="center">
-  <img src="images/ui-home.png"/>
-  <img src="images/ui-results.png"/>
+  <img src="images/ui-home.png" width="70%"/>
   <img src="https://img.shields.io/badge/Status-Production%20Ready-success?style=for-the-badge"/>
 </p>
 
@@ -33,11 +32,14 @@ Ideal for:
 
 ## 🖼️ Demo UI
 
-(Add your screenshots here)
+### 🔹 Home Screen
+![Home UI](images/ui-home.png)
 
-Example:
+### 🔹 Scored Task Results
+![Scored Tasks](images/ui-results.png)
 
-![UI Preview](images/demo-ui.png)
+### 🔹 Top 3 Suggestions
+![Top 3](images/ui-top3.png)
 
 ---
 
@@ -84,8 +86,35 @@ Recommends the best tasks to do *right now* based on strategy.
 ---
 
 ## 📁 Folder Structure
+task-analyzer/
+│
+├── backend/
+│ ├── manage.py
+│ ├── task_analyzer/
+│ └── tasks/
+│ ├── models.py
+│ ├── views.py
+│ ├── serializers.py
+│ ├── urls.py
+│
+├── frontend/
+│ ├── index.html
+│ ├── style.css
+│ └── script.js
+│
+├── images/
+│ ├── ui-home.png
+│ ├── ui-results.png
+│ └── ui-top3.png
+│
+└── README.md
 
+---
 
+## 👨‍🎓 Author
 
+**Keerthivasan Boopathy**  
+Francis Xavier Engineering College  
+Smart Task Analyzer — Internship Assignment  
 
 
