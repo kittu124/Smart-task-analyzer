@@ -43,6 +43,14 @@ Ideal for:
 
 ---
 
+## 🎥 Live Demo
+
+<p align="center">
+  <img src="demo.gif" width="800px">
+</p>
+
+--
+
 ## ✨ Features
 
 ### 🧠 Intelligent Scoring Algorithm  
@@ -116,5 +124,6 @@ task-analyzer/
 **Keerthivasan Boopathy**  
 Francis Xavier Engineering College  
 Smart Task Analyzer — Internship Assignment  
+
 
 
