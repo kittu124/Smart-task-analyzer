@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Backend-Django%205.2-green?style=for-the-badge"/>
+  <img src="ui-home.png"/>
   <img src="https://img.shields.io/badge/Frontend-HTML--CSS--JS-blue?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Status-Production%20Ready-success?style=for-the-badge"/>
 </p>
@@ -84,5 +84,6 @@ Recommends the best tasks to do *right now* based on strategy.
 ---
 
 ## 📁 Folder Structure
+
 
 
